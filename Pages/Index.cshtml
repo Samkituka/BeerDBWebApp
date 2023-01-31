@@ -1,0 +1,72 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page |Beer Db";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p> Web Application - Beer DB </p>
+
+</div>
+
+<br />
+
+<div class="row">
+    <div class="table-responsive ">
+        <table class=" table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>id</th>
+                    <th>brewery_id</th>
+                    <th>name</th>
+                    <th>cat_id</th>
+                    <th>style_id</th>
+                    <th>abv</th>
+                    <th>ibu</th>
+                    <th>srm</th>
+                    <th>upc</th>
+                    <th>filepath</th>
+                    <th>descript</th>
+                    <th>add_user</th>
+                    <th>last_mod</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model.Models)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.brewery_id</td>
+                        <td>@item.name</td>
+                        <td>@item.cat_id</td>
+                        <td>@item.style_id</td>
+                        <td>@item.abv</td>
+                        <td>@item.ibu</td>
+                        <td>@item.srm</td>
+                        <td>@item.upc</td>
+                        <td>@item.filepath</td>
+                        <td>@item.descript</td>
+                        <td>@item.add_user</td>
+                        <td>@item.last_mod</td>
+
+
+
+
+                    </tr>
+                }
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+
+
+</div>
